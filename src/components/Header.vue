@@ -2,8 +2,8 @@
   <div class="counter">
     <p :class="getData">{{ numberVariable }}</p>
     <div class="btns">
-        <button class="decBtn" @click="numberVariable--">-</button>
-        <button class="incBtn" @click="numberVariable++">+</button>
+      <button class="decBtn" @click="numberVariable--">-</button>
+      <button class="incBtn" @click="numberVariable++">+</button>
     </div>
   </div>
 </template>
@@ -19,22 +19,6 @@ export default {
 
       myArr: ["ZD banda", "baro lasha", "chemi venebi", "rasqvia bicho", 100],
     };
-  },
-  mounted() {
-    this.clickFunction();
-  },
-
-  created() {
-    console.log("created mode");
-  },
-
-  watch: {
-    numberVariable: {
-      immediate: true,
-      handler: function () {
-        console.log("var changed");
-      },
-    },
   },
 
   computed: {
@@ -58,36 +42,35 @@ export default {
 </script>
 
 <style scoped>
-.counter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.decBtn{
-    background-color: red;
+.decBtn {
+  background-color: red;
 }
 
-.incBtn{
-    background-color: green;
+.incBtn {
+  background-color: green;
 }
 
-.btns button{
-    margin: 10px 10px 10px;
-    padding: 10px 45px;
-    font-size: 25px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-
+.btns button {
+  margin: 10px 10px 10px;
+  padding: 10px 45px;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
 
-.counter p{
-    font-size: 35px;
-    font-weight: bold;
+.counter p {
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .test {
